@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Team Insight</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <link 
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" 
+rel="stylesheet"> 
+</head> 
+<body> 
+  <header> 
+    <h2>Team Insight</h2> 
+  </header> 
+ 
+  <div class="main-content"> 
+    <div class="container" ondrop="dropHandler(event)" 
+ondragover="dragOverHandler(event)"> 
+      <h1>Upload  Images</h1> 
+ 
+      <div class="custom-file"> 
+        <label for="image1">Choose First Image</label> 
+        <input type="file" id="image1" accept="image/*" onchange="previewImage(event, 
+'preview1')"> 
+        <img id="preview1" class="preview-img" alt="First preview" /> 
+      </div> 
+ 
+      <div class="custom-file"> 
+        <label for="image2">Choose Second Image</label> 
+        <input type="file" id="image2" accept="image/*" onchange="previewImage(event, 
+'preview2')"> 
+        <img id="preview2" class="preview-img" alt="Second preview" /> 
+      </div> 
+ 
+      <p class="drop-text">or drag & drop images here</p> 
+ 
+      <button onclick="goToNextPage()">Process & Next</button> 
+    </div> 
+  </div> 
+ 
+  <script src="script.js"></script> 
+</body> 
+</html> 
